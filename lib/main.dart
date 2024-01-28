@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/detabase/habit_detabase.dart';
 import 'package:habit_tracker/pages/home_page.dart';
@@ -12,9 +14,13 @@ void main() async {
   await HabitDatabase().saveFirstLaunchData();
 
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      child: MyApp(),
+    MultiProvider(providers: [
+      ChangeNotifierProvider(
+        create: (context) => HabitDatabase()),
+      ChangeNotifierProvider(
+        create: (context) => ThemeProvider()),
+    ],
+    child: MyApp(),
     )
   );
 }
