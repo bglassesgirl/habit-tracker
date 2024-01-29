@@ -66,7 +66,11 @@ class HabitTittle extends StatelessWidget {
               leading: Checkbox(
                 activeColor: Colors.green[300],
                 value: isCompleted,
-                onChanged: onChanged,
+                onChanged: (newValue) {
+                  if (onChanged != null) {
+                    onChanged!(newValue);
+                  }
+                },
               ),
             ),
           ),
