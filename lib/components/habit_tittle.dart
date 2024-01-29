@@ -48,7 +48,7 @@ class HabitTittle extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               color: isCompleted
-                  ? Colors.indigo
+                  ? Colors.cyan
                   : Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(10),
             ),
