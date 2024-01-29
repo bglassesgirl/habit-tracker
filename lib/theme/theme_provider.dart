@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'dark_theme.dart';  // Corrigido o nome do arquivo
 import 'light_theme.dart';
 
-
 class ThemeProvider extends ChangeNotifier{
 
   // primeiro light mode
@@ -19,7 +18,6 @@ class ThemeProvider extends ChangeNotifier{
     _themeData = themeData;
     notifyListeners();
   }
-
   // mudar tema
   void toggleTheme(){
     if (_themeData == lightMode) {
