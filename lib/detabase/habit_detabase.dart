@@ -17,7 +17,6 @@ class HabitDatabase extends ChangeNotifier {
       directory: dir.path,
     );
   }
-
   // SAVE FIRST DATE STARTUP
   Future<void> saveFirstLaunchData() async {
     final existingSettings = await isar.appSettings.where().findFirst();
